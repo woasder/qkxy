@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>qkxy</title>
+
+</head>
+<body>
+<div id='app1'>
+	<form id='app'>
+		<input id='push' type="submit" name="submit" value="提交"/>
+	</form>
+</div>
+<script type="text/javascript">
+	//var app = document.getElementById('app');
+	//var tbody = document.createElement('tbody');
+	//var qlist = [{qustion:'3*8'}];
+	//var td = document.createElement('td')
+	
+	var qlist=[{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+78',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},{q:'2+2',anw:'4',anw1:'4',anw2:'4',anw3:'4'},
+	];
+
+	function randomFn() {
+		return Math.floor(Math.random()*100);
+	}
+	function getklist() {
+		var klist=[];
+		while(klist.length<20){
+			var num = randomFn();
+			if (klist.indexOf(num)===-1){
+				klist.push(num);
+			}
+		}
+		return klist;
+	} 
+
+	var klist = getklist();
+
+	var container = document.createElement('div')
+	
+	for (var i=0;i<20;i++) {
+		var pppp = document.createElement('div')
+
+		var count = klist[i];
+		var qlistnum = qlist[count];
+
+		var p = document.createElement('p');
+		p.innerText='第'+ (i+1)+'题: '+qlistnum['q'];
+		p.dataset.anw = qlistnum['anw'];
+		pppp.appendChild(p);
+
+		for (var j=0;j<4;j++){
+			var label = document.createElement('label');
+			// var input = document.createElement('input');
+			// input.name='radio'+(i+1);
+			// input.type='radio';
+			// input.innerText='222';
+			// label.appendChild(input);
+			//label.appendData('222');
+			var anw = j===0?'anw':('anw'+j);
+			console.log(anw);
+			label.innerHTML="<input type=\"radio\""+ "name=\""+('radio'+(i+1))+"\""+"\/>"+qlistnum[anw];
+			pppp.appendChild(label)
+		}
+		
+		container.appendChild(pppp);
+
+	}
+	var ss= document.getElementById('push');
+	document.getElementById('app').insertBefore(container,ss);
+</script>
+</body>
+</html>
